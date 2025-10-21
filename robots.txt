@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://animalhoroscope.github.io/AstroPet.github.io/sitemap.xml

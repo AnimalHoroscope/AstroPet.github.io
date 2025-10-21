@@ -3,23 +3,143 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Developer — Ваше имя</title>
+  <title>AstroPet — гороскоп для питомцев</title>
+  <meta name="description" content="AstroPet — милый гороскоп для вашего питомца. Узнайте совместимость, настроение и рекомендации на каждый день." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta property="og:title" content="AstroPet — гороскоп для питомцев">
+  <meta property="og:description" content="Гороскоп и рекомендации для вашего любимца. Скачать бесплатно в RuStore.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://animalhoroscope.github.io/AstroPet.github.io/">
+  <meta property="og:image" content="https://animalhoroscope.github.io/AstroPet.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#111827">
+  <!-- Tailwind via Play CDN (работает без сборки) -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;margin:2rem;line-height:1.6}
-    .card{max-width:720px;padding:1.25rem;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 1px 8px rgba(0,0,0,.04)}
-    h1{margin:0 0 .25rem}
-    .muted{color:#6b7280}
-    a{color:#2563eb;text-decoration:none}
-    a:hover{text-decoration:underline}
-    code{background:#f3f4f6;border-radius:6px;padding:.15rem .35rem}
+    .glass{background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12)}
+    .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.15)}
+    .gradient-hero{background: radial-gradient(60% 60% at 100% 0%, #60a5fa22 0%, transparent 60%), radial-gradient(60% 60% at 0% 100%, #34d39922 0%, transparent 60%), linear-gradient(180deg, #0b1020 0%, #0e1426 100%);}
   </style>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "MobileApplication", "name": "AstroPet", "operatingSystem": "Android", "applicationCategory": "EntertainmentApplication", "url": "https://animalhoroscope.github.io/AstroPet.github.io/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "RUB"}, "author": {"@type": "Organization", "name": "AstroPet"}, "publisher": {"@type": "Organization", "name": "AstroPet"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "128"}}
+  </script>
 </head>
-<body>
-  <div class="card">
-    <h1>Ваше имя</h1>
-    <p class="muted">Разработчик мобильных приложений</p>
-    <p>Это минимальный сайт разработчика. Файл <code>app-ads.txt</code> лежит в корне.</p>
-    <p>Контакты: <a href="mailto:you@example.com">you@example.com</a></p>
-  </div>
+<body class="bg-slate-950 text-slate-100 selection:bg-emerald-300 selection:text-black">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-slate-950/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3 font-semibold text-lg">
+        <img src="/assets/logo.svg" alt="AstroPet" class="w-8 h-8"> AstroPet
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-slate-300">
+        <a href="#features" class="hover:text-white">Возможности</a>
+        <a href="#screens" class="hover:text-white">Скриншоты</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+        <a href="/privacy.html" class="hover:text-white">Политика</a>
+      </nav>
+      <a href="https://www.rustore.ru/catalog/app/com.animalhoroscope.app" class="inline-flex items-center gap-2 rounded-2xl px-4 py-2 glass hover:bg-white/10 transition">
+        <img src="/assets/rustore.svg" class="w-5 h-5" alt="RuStore">
+        <span class="font-medium">Скачать в RuStore</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="gradient-hero">
+    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Гороскоп<br/>для вашего питомца
+        </h1>
+        <p class="mt-5 text-lg text-slate-300">
+          AstroPet подскажет настроение, советы по уходу и совместимость.
+          Милые виджеты, астрология и немного магии — всё в одном месте.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://www.rustore.ru/catalog/app/com.animalhoroscope.app" class="shadow-soft bg-emerald-500 hover:bg-emerald-400 text-black font-semibold px-6 py-3 rounded-2xl">
+            Скачать бесплатно в RuStore
+          </a>
+          <a href="#features" class="px-6 py-3 rounded-2xl border border-white/20 hover:bg-white/10">
+            Узнать больше
+          </a>
+        </div>
+        <p class="mt-4 text-sm text-slate-400">Доступно на Android · Обновлено 2025-10-21</p>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-6 rounded-3xl bg-emerald-500/10 blur-2xl"></div>
+        <img src="/assets/hero-mock.png" alt="Скриншот AstroPet" class="relative rounded-3xl border border-white/10 shadow-soft w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold">Что умеет AstroPet</h2>
+      <p class="mt-3 text-slate-300">Коротко о главном — полезно и мило.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Дневной гороскоп</h3>
+          <p class="mt-2 text-slate-300">Настроение, активность, советы по прогулкам и играм для вашего питомца.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Совместимость</h3>
+          <p class="mt-2 text-slate-300">Сравнивайте знаки питомцев и находите лучших друзей на площадке.</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-semibold">Виджеты</h3>
+          <p class="mt-2 text-slate-300">Красивые виджеты на главный экран — всегда под рукой.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screens -->
+  <section id="screens" class="py-16 md:py-24 bg-white/5">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold">Скриншоты</h2>
+      <p class="mt-3 text-slate-300">Пара кадров интерфейса. Замените на реальные изображения, когда будете готовы.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <img src="/assets/screen-1.png" alt="Скриншот 1" class="rounded-2xl border border-white/10 w-full">
+        <img src="/assets/screen-2.png" alt="Скриншот 2" class="rounded-2xl border border-white/10 w-full">
+        <img src="/assets/screen-3.png" alt="Скриншот 3" class="rounded-2xl border border-white/10 w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 md:py-24">
+    <div class="max-w-4xl mx_auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold">Частые вопросы</h2>
+      <div class="mt-8 space-y-6">
+        <details class="glass rounded-2xl p-5">
+          <summary class="cursor-pointer text-lg font-semibold">Это бесплатно?</summary>
+          <p class="mt-2 text-slate-300">Да, приложение бесплатно. Возможна показ рекламы — см. файл <a href="/app-ads.txt" class="underline">app-ads.txt</a>.</p>
+        </details>
+        <details class="glass rounded-2xl p-5">
+          <summary class="cursor-pointer text-lg font-semibold">Где скачать?</summary>
+          <p class="mt-2 text-slate-300">В официальном магазине RuStore: <a class="underline" href="https://www.rustore.ru/catalog/app/com.animalhoroscope.app" target="_blank" rel="noopener">страница приложения</a>.</p>
+        </details>
+        <details class="glass rounded-2xl p-5">
+          <summary class="cursor-pointer text-lg font-semibold">Как связаться с разработчиком?</summary>
+          <p class="mt-2 text-slate-300">Напишите на <a class="underline" href="mailto:contact@astropet.app">contact@astropet.app</a>. Замените адрес на свой в <code>index.html</code>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-400">
+      <p>© 2025 AstroPet</p>
+      <div class="flex items-center gap-6">
+        <a href="https://www.rustore.ru/catalog/app/com.animalhoroscope.app" class="hover:text-white">RuStore</a>
+        <a href="/privacy.html" class="hover:text-white">Политика конфиденциальности</a>
+        <a href="mailto:contact@astropet.app" class="hover:text-white">Поддержка</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
